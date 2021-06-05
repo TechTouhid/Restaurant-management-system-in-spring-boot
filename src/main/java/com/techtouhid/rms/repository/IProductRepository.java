@@ -11,7 +11,6 @@ public interface IProductRepository extends JpaRepository<Product, Long> {
             //"join p.productType pt " +
             "where 1=1" +
             "and ( upper(p.name) like concat('%', upper(?1), '%') " +
-            "       or upper(p.brand) like concat('%', upper(?1), '%') " +
             "       or upper(p.madein) like concat('%', upper(?1), '%')" +
             //"       or upper(pt.name) like concat('%', upper(?1), '%')" +
             ")")

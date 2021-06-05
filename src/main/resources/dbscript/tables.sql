@@ -16,7 +16,6 @@ CREATE TABLE `product`
     `product_id`      int(11) NOT NULL AUTO_INCREMENT,
     `product_type_id` int(11) DEFAULT NULL,
     `name`            varchar(100) DEFAULT NULL,
-    `brand`           varchar(100) DEFAULT NULL,
     `madein`          varchar(100) DEFAULT NULL,
     `price`           double(9, 2
 ) DEFAULT NULL,

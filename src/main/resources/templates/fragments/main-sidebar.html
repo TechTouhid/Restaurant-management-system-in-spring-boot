@@ -25,8 +25,8 @@
                 <li class="active"><a href="/"><i class="fa fa-dashboard"></i> Dashboard v1</a></li>
 -->
 
-                <li class="active"><a th:href="@{/product/list}"><i class="fa fa-circle-o"></i> Product</a></li>
-                <li><a th:href="@{/producttype/list}"><i class="fa fa-circle-o"></i> Product Type</a></li>
+                <li class="active"><a th:href="@{/product/list}"><i class="fa fa-circle-o"></i> Products</a></li>
+                <li><a th:href="@{/producttype/list}"><i class="fa fa-circle-o"></i> Product Types</a></li>
                 <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}"><i class="fa fa-circle-o"></i> Logout</a></li>
             </ul>
         </li>

@@ -46,16 +46,6 @@ public class Product {
         this.name=name;
     }
 
-    @Column(name = "brand")
-    private String brand;
-
-    public String getBrand(){
-        return this.brand;
-    }
-    public void setBrand(String brand){
-        this.brand=brand;
-    }
-
     @Column(name = "madein")
     private String madein;
 
