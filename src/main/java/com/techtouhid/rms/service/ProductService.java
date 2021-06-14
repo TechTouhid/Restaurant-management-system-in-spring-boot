@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -55,5 +56,16 @@ public class ProductService {
 
     public void delete(long id) {
         repo.deleteById(id);
+    }
+
+    public Product getProductById(long id) {
+        Optional<Product> optional = repo.findById(id);
+        Product product = null;
+        if (optional.isPresent()) {
+            product = optional.get();
+        } else {
+            throw new RuntimeException("Product not found for id" + id);
+        }
+        return product;
     }
 }

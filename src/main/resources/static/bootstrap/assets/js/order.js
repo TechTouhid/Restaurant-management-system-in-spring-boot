@@ -5,6 +5,14 @@ function total1() {
     document.getElementById("Total").value = Price * Quantity;
 
 }
+function get_id(clicked_id)
+{
+    alert(clicked_id);
+}
+var product_price = 0;
+function setProductPrice(price) {
+    product_price = price
+}
 
 function addRow() {
 
@@ -15,7 +23,7 @@ function addRow() {
     let Price = document.getElementById('Price').value;
     let Total = document.getElementById('Total').value;
 
-    let table = document.getElementsByTagName('table')[0];
+    let table = document.getElementsByTagName('table')[1];
 
     let newRow = table.insertRow(table.rows.length / 2 + 1);
 
