@@ -15,9 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 @Controller
-
 public class OrderController {
-    //    private String list_redirect="redirect:/product/list";
+
     @Autowired
     private com.techtouhid.rms.service.ProductService productService;
 
@@ -65,5 +64,29 @@ public class OrderController {
 
         orderService.saveOrder(order);
         return "order";
+    }
+
+    @GetMapping("/orderList")
+    public String listOrder(Model model) {
+        List<Order> listOrder = orderService.listAll();
+        model.addAttribute("listOrder", listOrder);
+
+        return "/admin/order/order_list";
+    }
+
+    @GetMapping("/orderDelete/{id}")
+    public String deleteOrder(@PathVariable("id") long id, Model model) {
+//        List<Order> listOrder = orderService.listAll();
+//        model.addAttribute("listOrder", listOrder);
+        orderService.delete(id);
+
+        return "redirect:/orderList";
+    }
+
+    @GetMapping("/orderEdit/{id}")
+    public String editProduct(@PathVariable("id") long id, Model model){
+        Order order = orderService.get(id);
+        model.addAttribute("order", order);
+        return "add_edit_order";
     }
 }
