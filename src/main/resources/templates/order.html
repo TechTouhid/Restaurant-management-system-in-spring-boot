@@ -122,11 +122,17 @@
 <section class="section" id="order">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="contact-form">
                     <div class="row" >
-
                         <div class="col-sm-12">
+                            <div th:if="${param.success}">
+                                <div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <h4><i class="icon fa fa-check"></i> Success!</h4>
+                                    Information saved successfully.
+                                </div>
+                            </div>
                             <table id="productTable" class="table table-bordered table-striped dataTable" role="grid"
                                    aria-describedby="example1_info" >
                                 <thead class="thead" th:bgcolor="white">
@@ -155,15 +161,8 @@
 
                                     <td th:text="${product.price}">Price</td>
                                     <td>
-<!--                                        <button onclick="addRow()" type="button" class="main-button-icon" th:href="@{'/order/' + ${product.id}}">-->
-<!--                                            Order-->
-<!--                                        </button>-->
                                         <a href="#" class="btn btn-primary btn-xs purple editView" title="Edit"
                                            th:href="@{'/order/' + ${product.id}}"><i class="fa fa-edit"></i>Order</a>
-<!--                                           th:href="@{/order/{id}/{name}( id = ${product.id}, name = ${product.name})}"><i class="fa fa-edit"></i>Order</a>-->
-
-<!--                                        <a th:href="@{/pathvars/item/{itemId}/detail/{dtlId}(itemId = ${item.id}, dtlId = ${dtl.id})}">-->
-
                                     </td>
                                 </tr>
                                 </tbody>
@@ -172,32 +171,32 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <!--                <div class="container">-->
-                <div class="list-group-item list-group-item-action active">Add Products Order</div>
-                <div class="col-lg-6">
-                    <label th:bgcolor="white">Quantity</label>
-                    <input onkeyup="total1()" type="number" class="form-control" name="Quantity"
-                           id="Quantity"
-                           placeholder="Quantity">
-                </div>
-                <div class="col-lg-6">
-                    <label th:bgcolor="white">Total</label>
-                    <input  type="number" class="form-control" name="Total" id="Total"
-                            placeholder="Total">
-                </div>
-                <div class="col-lg-6">
-                    <label th:bgcolor="white">Customer Name</label>
-                    <input  type="number" class="form-control" name="Total" id="customerName"
-                            placeholder="Customer Name">
-                </div>
-                <div class="col-lg-6">
-                    <label th:bgcolor="white">Phone Number</label>
-                    <input  type="number" class="form-control" name="Total" id="phone"
-                            placeholder="Phone Number">
-                </div>
+            <!--            <div class="col-lg-6">-->
+            <!--                &lt;!&ndash;                <div class="container">&ndash;&gt;-->
+            <!--                <div class="list-group-item list-group-item-action active">Add Products Order</div>-->
+            <!--                <div class="col-lg-6">-->
+            <!--                    <label th:bgcolor="white">Quantity</label>-->
+            <!--                    <input onkeyup="total1()" type="number" class="form-control" name="Quantity"-->
+            <!--                           id="Quantity"-->
+            <!--                           placeholder="Quantity">-->
+            <!--                </div>-->
+            <!--                <div class="col-lg-6">-->
+            <!--                    <label th:bgcolor="white">Total</label>-->
+            <!--                    <input  type="number" class="form-control" name="Total" id="Total"-->
+            <!--                            placeholder="Total">-->
+            <!--                </div>-->
+            <!--                <div class="col-lg-6">-->
+            <!--                    <label th:bgcolor="white">Customer Name</label>-->
+            <!--                    <input  type="number" class="form-control" name="Total" id="customerName"-->
+            <!--                            placeholder="Customer Name">-->
+            <!--                </div>-->
+            <!--                <div class="col-lg-6">-->
+            <!--                    <label th:bgcolor="white">Phone Number</label>-->
+            <!--                    <input  type="number" class="form-control" name="Total" id="phone"-->
+            <!--                            placeholder="Phone Number">-->
+            <!--                </div>-->
 
-            </div>
+            <!--            </div>-->
         </div>
     </div>
     <!--    </div>-->

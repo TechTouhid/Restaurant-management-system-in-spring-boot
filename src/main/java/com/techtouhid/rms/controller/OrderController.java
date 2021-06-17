@@ -56,14 +56,8 @@ public class OrderController {
 
     @PostMapping("/saveOrder")
     public String saveOrder(@ModelAttribute("order") Order order, BindingResult result, Model model) {
-//        Product product = productService.getProductById(id);
-//        model.addAttribute("orderProduct", product.getName());
-//        model.addAttribute("order", order);
-//        List<Product> listProducts = productService.listAll();
-//        model.addAttribute("orderProduct", listProducts);
-
         orderService.saveOrder(order);
-        return "order";
+        return "redirect:/order" + "?success" + "#order";
     }
 
     @GetMapping("/orderList")
@@ -76,15 +70,13 @@ public class OrderController {
 
     @GetMapping("/orderDelete/{id}")
     public String deleteOrder(@PathVariable("id") long id, Model model) {
-//        List<Order> listOrder = orderService.listAll();
-//        model.addAttribute("listOrder", listOrder);
         orderService.delete(id);
 
-        return "redirect:/orderList";
+        return "redirect:/orderList" + "?deleted";
     }
 
     @GetMapping("/orderEdit/{id}")
-    public String editProduct(@PathVariable("id") long id, Model model){
+    public String editOrder(@PathVariable("id") long id, Model model){
         Order order = orderService.get(id);
         model.addAttribute("order", order);
         return "add_edit_order";

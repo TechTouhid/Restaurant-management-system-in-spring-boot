@@ -122,78 +122,88 @@
 <section class="section" id="order">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="contact-form">
-                    <form th:action="@{/saveOrder}" th:object="${order}" method="post" class="form-horizontal">
-                        <div class="box-body">
-
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Product Id</label>
-                                <div class="col-sm-10">
-                                    <input  type="text" class="form-control" placeholder="Product ID" th:field="*{productId}">
-                                </div>
+                    <form id="contact" th:action="@{/saveOrder}" th:object="${order}" method="post"
+                          class="form-horizontal">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4>Order Product</h4>
                             </div>
 
 
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Product Name</label>
-                                <div class="col-sm-10">
-                                    <input  type="text" class="form-control"  th:field="*{productName}">
-                                </div>
+                            <div class="col-lg-4">
+                                <label>Product Id</label>
+                                <input readonly="readonly" type="text" class="form-control" placeholder="Product ID"
+                                       th:field="*{productId}">
                             </div>
 
 
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Product Price</label>
-                                <div class="col-sm-10">
-                                    <input  type="text" class="form-control" placeholder="Product price" th:field="*{price}">
-                                </div>
-                            </div>
+                            <div class="col-lg-4">
+                                <label>Product Name</label>
 
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Product Made in</label>
-                                <div class="col-sm-10">
-                                    <input  type="text" class="form-control" placeholder="Product made in" th:field="*{madein}">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Product quantity</label>
-                                <div class="col-sm-10">
-                                    <input  type="text" class="form-control" placeholder="Product quantity" th:field="*{quantity}">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Product Total Price</label>
-                                <div class="col-sm-10">
-                                    <input  type="text" class="form-control" placeholder="Product totalPrice" th:field="*{totalPrice}">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Customer Name</label>
-                                <div class="col-sm-10">
-                                    <input  type="text" class="form-control" placeholder="Customer Name" th:field="*{customerName}">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Phone Number</label>
-                                <div class="col-sm-10">
-                                    <input  type="text" class="form-control" placeholder="Phone Number" th:field="*{phoneNumber}">
-                                </div>
+                                <input readonly="readonly" type="text" class="form-control" th:field="*{productName}">
                             </div>
 
 
-                            <div class="form-group">
-                                <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-info pull-right"><i class="fa fa-save"></i> Save</button>
-                                </div>
+                            <div class="col-lg-4">
+                                <label>Product Price</label>
+
+                                <input readonly="readonly" id="Price" type="text" class="form-control" placeholder="Product price"
+                                       th:field="*{price}">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <label>Product Made in</label>
+                                <input readonly="readonly" type="text" class="form-control" placeholder="Product made in"
+                                       th:field="*{madein}">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <label>Product quantity</label>
+                                <input onkeyup="total1()" id="Quantity" type="text" class="form-control"
+                                       placeholder="Product quantity"
+                                       th:field="*{quantity}">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <label>Product Total Price</label>
+                                <input readonly="readonly" id="Total" type="text" class="form-control"
+                                       placeholder="Product totalPrice"
+                                       th:field="*{totalPrice}">
+                            </div>
+
+                            <div class="col-lg-12">
+                                <br>
+                            </div>
+
+
+                            <div class="col-lg-4">
+                                <label>Customer Name</label>
+                                <input type="text" class="form-control" placeholder="Customer Name"
+                                       th:field="*{customerName}">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control" placeholder="Phone Number"
+                                       th:field="*{phoneNumber}">
+                            </div>
+
+                            <div class="col-lg-12">
+                                <br>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <button type="submit" class="btn btn-info pull-right"><i class="fa fa-save"></i>
+                                        Save
+                                    </button>
+                                </fieldset>
                             </div>
 
                         </div>
-                         /.box-footer
+
                     </form>
                 </div>
             </div>
