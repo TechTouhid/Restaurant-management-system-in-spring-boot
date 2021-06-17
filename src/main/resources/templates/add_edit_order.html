@@ -131,7 +131,6 @@
                                 <h4>Order Product</h4>
                             </div>
 
-
                             <div class="col-lg-4">
                                 <label>Product Id</label>
                                 <input readonly="readonly" type="text" class="form-control" placeholder="Product ID"
@@ -171,6 +170,12 @@
                                 <input readonly="readonly" id="Total" type="text" class="form-control"
                                        placeholder="Product totalPrice"
                                        th:field="*{totalPrice}">
+                            </div>
+
+                            <div class="col-lg-4">
+
+                                <input hidden type="text" class="form-control" placeholder="Order ID"
+                                       th:field="*{id}">
                             </div>
 
                             <div class="col-lg-12">
