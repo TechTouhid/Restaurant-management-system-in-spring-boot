@@ -58,11 +58,16 @@
                         <!--                        <li class="scroll-to-section"><a href="#about">About</a></li>-->
 
                         <!--                        <li class="scroll-to-section"><a href="#menu">Menu</a></li>-->
-                        <li class="scroll-to-section"><a href="#order">Order Here</a></li>
-                        <li class="scroll-to-section"><a href="#reservation">Emergency Contact</a></li>
+                        <li class="scroll-to-section"><a href="#order">Order</a></li>
+                        <li class="scroll-to-section"><a href="#chefs">About Us</a></li>
 
-                        <li class="scroll-to-section"><a href="/login">log in</a></li>
+                        <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
+
                         <li class="scroll-to-section"><a href="/dashboard">Dashboard</a></li>
+                        <li>
+                            <button class="btn btn-danger" onclick="window.location.href='/logout'">log out</button>
+                        </li>
+
                     </ul>
                     <!-- ***** Menu End ***** -->
 
@@ -148,13 +153,15 @@
                             <div class="col-lg-4">
                                 <label>Product Price</label>
 
-                                <input readonly="readonly" id="Price" type="text" class="form-control" placeholder="Product price"
+                                <input readonly="readonly" id="Price" type="text" class="form-control"
+                                       placeholder="Product price"
                                        th:field="*{price}">
                             </div>
 
                             <div class="col-lg-4">
                                 <label>Product Made in</label>
-                                <input readonly="readonly" type="text" class="form-control" placeholder="Product made in"
+                                <input readonly="readonly" type="text" class="form-control"
+                                       placeholder="Product made in"
                                        th:field="*{madein}">
                             </div>
 
@@ -226,66 +233,90 @@
 <section class="section" id="chefs">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 offset-lg-4 text-center">
+            <div class="col-lg-12 text-center">
                 <div class="section-heading">
-                    <h6>Our Chefs</h6>
-                    <h2>We offer the best ingredients for you</h2>
+                    <h6>About US</h6><br>
+                    <h4> Klassy Is the leading Fine Dine Restaurant In Port City Chittagong Since 2008. Klassy
+                        restaurant
+                        offers full flavored, full-bodied Thai, Chinese, Indian, Indonesian, Continental , Arabian and
+                        Bangladeshi dishes with a fine touch of a very special chef with competitive price. It is
+                        located in the heart of Chittagong city at the commercial area of Agrabad between ‘Port &
+                        Court’, ‘Shore & Hills’.<br><br>
+
+                        Klassy has a very nice and cozy atmosphere decorated with warm color and colonial outlook. We
+                        have facilities for arranging all types of programmes for 500-700 people, meeting, and
+                        conference and individual lunch/dinner arrangement.<br><br>
+
+                        In Greek mythology, the best of the men are not men but Gods. And they are not expected to have
+                        anything but the finest.<br><br>
+
+                        Gods’ Klassy is sometimes the food, sometimes the drink, of the gods, often depicted as
+                        conferring ageless immortality upon whoever consumes it.<br><br>
+
+                        Klassy is of such scintillating taste that mare mortals could only dream and wonder. It is
+                        something that people desperately tried to find, to create all that makes for a great story but
+                        it contains within itself the pursuit of perfection. Food is not just a means of survival but is
+                        an experience to be savoured. And Klassy, as the food of the heavens, is the ultimate
+                        benchmark for that experience.<br><br>
+
+                        Klassy is open seven days a week.</h4>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="chef-item">
-                    <div class="thumb">
-                        <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                        <img src="bootstrap/assets/images/chefs-01.jpg" alt="Chef #1">
-                    </div>
-                    <div class="down-content">
-                        <h4>Randy Walker</h4>
-                        <span>Pastry Chef</span>
-                    </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="chef-item">
+                <div class="thumb">
+                    <div class="overlay"></div>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                    <img src="bootstrap/assets/images/rsz_touhid.jpg" alt="Owner #1">
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="chef-item">
-                    <div class="thumb">
-                        <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                        <img src="bootstrap/assets/images/chefs-02.jpg" alt="Chef #2">
-                    </div>
-                    <div class="down-content">
-                        <h4>David Martin</h4>
-                        <span>Cookie Chef</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="chef-item">
-                    <div class="thumb">
-                        <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google"></i></a></li>
-                        </ul>
-                        <img src="bootstrap/assets/images/chefs-03.jpg" alt="Chef #3">
-                    </div>
-                    <div class="down-content">
-                        <h4>Peter Perkson</h4>
-                        <span>Pancake Chef</span>
-                    </div>
+                <div class="down-content">
+                    <h4>Touhidur Rahman</h4>
+                    <span>Owner</span>
                 </div>
             </div>
         </div>
+        <div class="col-lg-4">
+            <div class="chef-item">
+                <div class="thumb">
+                    <div class="overlay"></div>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                    <img src="bootstrap/assets/images/rsz_azad.jpg" alt="Co-Owner #2">
+                </div>
+                <div class="down-content">
+                    <h4>Azad Hossain</h4>
+                    <span>Co-Owner</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="chef-item">
+                <div class="thumb">
+                    <div class="overlay"></div>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                    <img src="bootstrap/assets/images/rsz_sumon.jpg" alt="Co-Owner #3">
+                </div>
+                <div class="down-content">
+                    <h4>Sumon Ahamed</h4>
+                    <span>Co-Owner</span>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </section>
 <!-- ***** Chefs Area Ends ***** -->
