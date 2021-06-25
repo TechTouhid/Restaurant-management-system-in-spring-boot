@@ -19,7 +19,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b>Admin</a>
+        <a href="#">Admin</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
@@ -38,8 +38,7 @@
         </div>
 
         <div th:if="${param.success}">
-            <div class="alert alert-info">You've successfully registered
-                to our awesome app!</div>
+            <div class="alert alert-info text-center">You've successfully registered!</div>
         </div>
 
         <form th:action="@{/register}" th:object="${userRegistrationDto}" method="post">
